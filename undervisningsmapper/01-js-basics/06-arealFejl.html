@@ -20,22 +20,30 @@
         function button_clicked() {
             let længde = document.querySelector("#længde").value;
             let bredde = document.querySelector("#bredde").value;
+
+
             //let areal = længde * bredde;
-            let resultat = `Arealet er ${areal(længde, bredde)} kvadratmeter`;
-
-
-            if (areal(længde, bredde) <= 0) {
-                console.log("forkert tal")
-
-            } else {
-                console.log(resultat);
-            }
 
 
         }
+
+
 
         function areal(l, b) {
-            return (l * b);
+            let a == (l * b);
+            if (a == 0) {
+                return (`Husk længde og bredde skal være tal. \n prøv igen`);
+            } else {
+                return (`Arealet er ${a}. \n vil du lave et nyt areal`);
+            }
         }
+
+        confirm(resultat);
+
+        let resultat = areal(længde, bredde);
+        console.log(resultat);
+
     </script>
-</body></html>
+</body>
+
+</html>
