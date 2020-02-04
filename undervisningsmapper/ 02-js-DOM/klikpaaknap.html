@@ -33,14 +33,62 @@
     <button id="html">
         html
     </button>
-    <button id="slet">
+    <button id="flyt">
         flyt
     </button>
     <div id="box"></div>
     <div id="bax"></div>
 
+
+
     <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("start");
+            document.querySelector("#klik").addEventListener("click", klikTekst);
+            document.querySelector("#html").addEventListener("click", klikHtml);
+            document.querySelector("#flyt").addEventListener("click", flyt);
 
 
+
+
+
+            function klikTekst() {
+
+                document.querySelector("#box").innerHTML = `KLIK`;
+                document.querySelector("#klik").removeEventListener("click", klikTekst);
+                document.querySelector("#slet").addEventListener("click", slet);
+
+            }
+
+
+
+
+
+            function slet() {
+                document.querySelector("#box").innerHTML = ``;
+
+            }
+
+
+
+            function klikHtml() {
+
+                document.querySelector("#bax").innerHTML = `<h2>HEJ</h2><p>Hej hej</p> `;
+
+
+            }
+
+            function flyt() {
+
+                document.querySelector("#bax").innerHTML = document.querySelector("#box").innerHTML;
+                document.querySelector("#box").innerHTML = document.querySelector("#box").innerHTML;
+                //                document.querySelector("#bax").innerHTML = document.querySelector("#box").innerHTML;
+                // document.querySelector("#bax").innerHTML = document.querySelector("#box").innerHTML;
+
+            }
+
+        }
     </script>
 </body></html>
